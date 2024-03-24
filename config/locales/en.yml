@@ -1,0 +1,35 @@
+en:
+  posts:
+    read_more: "Read more"
+    title_posts: "News of Vyacheslav"
+    all_comm: "Comments"
+    add_comm: "Add Comment"
+    add_comms: "Add your own comment"
+    text_comm: "Text of comment"
+
+  header:
+    main_page: "Main page"
+    add_post: "Add News"
+    my_account: "Personal account"
+    exit: "Log out"
+    login: "Log in"
+    reg_usr: "Sign up"
+    info: "Creator information"
+
+  edit:
+    edit_post: "Edit post"
+    edit_btn: "Edit"
+    delete_btn: "Delete"
+    enter: "Enter"
+    save: "Save"
+    my_news: "My news"
+
+  fields:
+    news_name: "Name of news"
+    news_text: "Text of news"
+    news_title: "Create new news!"
+    news_add: "Create news"
+    login: "Login"
+    password: "Password"
+    name: "Name"
+    info_title: "Personal account"

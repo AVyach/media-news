@@ -1,0 +1,35 @@
+ru:
+  posts:
+    read_more: "Читать далее"
+    title_posts: "Новости от Вячеслава"
+    all_comm: "Комментарии"
+    add_comm: "Добавить комментарий"
+    add_comms: "Добавление комментария"
+    text_comm: "Текст комментария"
+
+  header:
+    main_page: "Главная страница"
+    add_post: "Добавить новость"
+    my_account: "Личный кабинет"
+    exit: "Выход"
+    login: "Вход"
+    reg_usr: "Регистрация"
+    info: "Информация о создателе"
+
+  edit:
+    edit_news: "Редактировать новость"
+    edit_btn: "Редактировать"
+    delete_btn: "Удалить"
+    save: "Сохранить"
+    enter: "Войти"
+    my_news: "Мои новости"
+
+  fields:
+    news_name: "Название"
+    news_text: "Текст новости"
+    news_title: "Создание новости!"
+    news_add: "Создать новость"
+    login: "Логин"
+    password: "Пароль"
+    name: "Имя"
+    info_title: "Личный кабинет"

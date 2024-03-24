@@ -1,0 +1,8 @@
+<h1><%= t('posts.title_posts') %></h1>
+<% @post.each do |post| %>
+    <div class="alert alert-light">
+        <h3><%= post.title %></h3>
+        <p><%= post.body %></p>
+        <%= link_to t('posts.read_more'), post_path(post), :class => 'btn btn-outline-primary' %>
+    </div>
+<% end %>

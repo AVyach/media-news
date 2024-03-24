@@ -1,0 +1,16 @@
+<%= form_for :session, url: session_path() do |f| %>
+  <p>
+    <%= t('fields.login') %> <br>
+    <%= f.text_field(:login, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= t('fields.password') %> <br>
+    <%= f.text_field(:password, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit(t('edit.enter'),{:class => 'btn btn-success'})  %>
+  </p>
+
+<% end %>

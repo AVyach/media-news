@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vyach NEWS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f8f9fa;
+          color: #343a40; /* Темно-серый цвет текста */
+      }
+
+      .navbar {
+          background-color: #007bff;
+          color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand {
+          font-size: 1.5rem;
+          color: #fff;
+      }
+
+      .nav-link {
+          color: #fff !important;
+      }
+
+      .container {
+          background-color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          border-radius: 8px;
+          margin-top: 20px;
+      }
+
+      .language-select {
+          margin-top: 20px;
+      }
+
+      footer {
+          margin-top: 20px;
+          padding: 10px 0;
+          background-color: #f8f9fa;
+          text-align: center;
+          color: #6c757d; /* Серый цвет текста */
+      }
+
+      /* Custom Button Styles */
+      .custom-btn {
+          padding: 10px 20px;
+          font-size: 16px;
+          margin-right: 10px;
+      }
+
+      .btn-outline-custom {
+          color: #007bff;
+          border-color: #007bff;
+      }
+
+      .btn-outline-custom:hover {
+          color: #fff;
+          background-color: #007bff;
+      }
+  </style>
+</head>
+
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-bold">Vyach NEWS</h5>
+  <nav class="my-2 my-md-0 mr-md-3 d-flex">
+    <span class="p-2 text-dark"><%= link_to t('header.main_page'), root_path %></span>
+    <span class="p-2 text-dark"><%= link_to t('header.info'), about_path %></span>
+    <% unless current_user %>
+      <span class="me-3 py-2 link-body-emphasis text-decoration-none"><%= link_to t('header.reg_usr'), new_user_path %></span>
+    <% end %>
+
+    <% if current_user %>
+      <!-- Customize the add_post and exit buttons -->
+      <span class="me-3 py-2 link-body-emphasis text-decoration-none">
+    <%= link_to t('header.add_post'), new_post_path, class: 'btn btn-outline-custom custom-btn' %>
+  </span>
+      <span class="me-3 py-2 link-body-emphasis text-decoration-none">
+    <%= button_to t('header.exit'), session_path, method: :delete, class: 'btn btn-outline-danger custom-btn' %>
+  </span>
+    <% else %>
+      <!-- Customize the login button -->
+      <span class="me-3 py-2 link-body-emphasis text-decoration-none">
+    <%= link_to t('header.login'), new_session_path, class: 'btn btn-primary custom-btn' %>
+  </span>
+    <% end %>
+  </nav>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<div class="language-select mt-3 text-center">
+  <%= form_tag(change_language_path, method: :post) do %>
+    <%= select_tag(:locale, options_for_select([['Русский', 'ru'], ['English', 'en']], I18n.locale.to_s), class: 'form-select', onchange: 'this.form.submit();') %>
+  <% end %>
+</div>
+
+<footer class="mt-5">
+  <p class="text-center">&copy; 2023 Vyach NEWS. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

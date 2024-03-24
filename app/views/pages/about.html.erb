@@ -1,0 +1,25 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Анимация выезжания влево для заголовка
+        $("h3").animate({
+            marginLeft: "0",
+            opacity: "1"
+        }, 1000);
+
+        // Анимация выезжания влево для текста
+        $("p").delay(500).animate({
+            marginLeft: "0",
+            opacity: "1"
+        }, 1000);
+    });
+</script>
+
+<style>
+    h3, p {
+        margin-left: -50px; /* Начальный отступ слева, чтобы элементы были изначально за пределами видимой области */
+    }
+</style>
+
+<h3><%= @heading %></h3>
+<p><%= @text %></p>
