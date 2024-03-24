@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a university-based project that is built on the Ruby on Rails platform. The website includes features for adding, deleting and editing articles, as well as two levels of access - administrators and users.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Это университетский проект, построенный на платформе Ruby on Rails. Веб-сайт включает в себя функции для добавления, удаления и редактирования статей, а также два уровня доступа - администраторов и пользователей.
